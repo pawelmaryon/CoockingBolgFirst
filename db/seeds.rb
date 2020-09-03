@@ -16,7 +16,7 @@
       title: Faker::Food.dish,
       description: Faker::Food.ingredient,
       body: Faker::Food.description,
-      main_image: "http://placehold.it/600x400",
-      thumb_image: "http://placehold.it/350x200",
+      main_image: "https://via.placeholder.com/600x400.png",
+      thumb_image: "https://via.placeholder.com/350x200.png",
     )
   end
