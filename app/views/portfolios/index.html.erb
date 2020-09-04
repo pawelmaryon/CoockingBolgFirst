@@ -3,7 +3,6 @@
   <h2><%= item.title %></h2>
   <h5><%= item.description %></h5>
   <p><%= item.body %></p>
-  <p><%= item.main_image %></p>
-  <p><%= item.thumb_image %></p>
+  <%= image_tag item.thumb_image %>
   <hr>
   <% end %>
