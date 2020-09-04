@@ -29,6 +29,15 @@ class PortfoliosController < ApplicationController
       render :edit
     end
   end
+  def show
+    @portfolio_item = Portfolio.find(params[:id])
+  end
+  def destroy
+    @portfolio_item = Portfolio.find(params[:id])
+    if @portfolio_item.destroy
+      redirect_to portfolios_path, notice: "Record was removed"
+    end
+  end
 
   private
 
