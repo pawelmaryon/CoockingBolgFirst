@@ -17,11 +17,11 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-    @portfolio_item = Portfolio.find(params[:id])
+    @portfolio_item = Portfolio.friendly.find(params[:id])
   end
 
   def update
-    @portfolio_item = Portfolio.find(params[:id])
+    @portfolio_item = Portfolio.friendly.find(params[:id])
 
     if @portfolio_item.update(portfolio_params)
       redirect_to portfolios_path
@@ -30,10 +30,10 @@ class PortfoliosController < ApplicationController
     end
   end
   def show
-    @portfolio_item = Portfolio.find(params[:id])
+    @portfolio_item = Portfolio.friendly.find(params[:id])
   end
   def destroy
-    @portfolio_item = Portfolio.find(params[:id])
+    @portfolio_item = Portfolio.friendly.find(params[:id])
     if @portfolio_item.destroy
       redirect_to portfolios_path, notice: "Record was removed"
     end
