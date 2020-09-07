@@ -1,6 +1,8 @@
 class Portfolio < ApplicationRecord
   include Placeholder
 
+  has_many :cousines
+  
   validates :title, presence: true
   validates :description, presence: true
   validates :body, presence: true

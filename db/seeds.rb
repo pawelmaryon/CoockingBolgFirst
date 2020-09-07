@@ -12,6 +12,8 @@
   )
 end
 
+puts "3 Topicks created"
+
 10.times do | blog |
   Blog.create!(
     title: Faker::Food.spice,
@@ -19,6 +21,9 @@ end
     topic_id: Topic.last.id
   )
   end
+
+puts "10  Blogs created"
+
 9.times do |portfolio_item|
   Portfolio.create!(
     title: Faker::Food.dish,
@@ -28,3 +33,13 @@ end
     thumb_image: "https://via.placeholder.com/350x200.png",
   )
 end
+
+puts "9 Portfolio items created"
+
+3.times do |cousine|
+  Portfolio.last.cousines.create!(
+    name: "Cousine #{cousine}"
+  )
+end
+
+puts "3 cousines created"

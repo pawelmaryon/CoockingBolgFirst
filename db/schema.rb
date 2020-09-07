@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_07_075007) do
+ActiveRecord::Schema.define(version: 2020_09_07_141018) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 2020_09_07_075007) do
     t.bigint "topic_id"
     t.index ["slug"], name: "index_blogs_on_slug", unique: true
     t.index ["topic_id"], name: "index_blogs_on_topic_id"
+  end
+
+  create_table "cousines", force: :cascade do |t|
+    t.string "name"
+    t.bigint "portfolio_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["portfolio_id"], name: "index_cousines_on_portfolio_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -56,4 +64,5 @@ ActiveRecord::Schema.define(version: 2020_09_07_075007) do
   end
 
   add_foreign_key "blogs", "topics"
+  add_foreign_key "cousines", "portfolios"
 end
