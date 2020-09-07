@@ -3,6 +3,14 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.all
   end
 
+  def soya
+    @soya_items = Portfolio.soya
+  end
+
+  def cheese
+    @cheese_items = Portfolio.cheese
+  end
+
   def new
     @portfolio_item = Portfolio.new
   end
