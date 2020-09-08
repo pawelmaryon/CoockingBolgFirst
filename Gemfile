@@ -48,3 +48,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'faker', '~> 1.6', '>= 1.6.6'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'friendly_id', '~> 5.4.0'
+gem 'devise', '~> 4.7', '>= 4.7.2'
