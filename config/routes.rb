@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :blogs
   resources :portfolios, except: [:show]
   get 'soya', to: 'portfolios#soya'
