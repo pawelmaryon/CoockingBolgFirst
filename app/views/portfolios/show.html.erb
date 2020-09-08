@@ -3,5 +3,10 @@
   <h1><%= @portfolio_item.title %></h1>
   <h5><%= @portfolio_item.description %></h5>
   <p><%= @portfolio_item.body %></p>
+
+  <h2>Cousines</h2>
+  <% @portfolio_item.cousines.each do |c| %>
+    <p><%= c.name %></p>
+  <% end %>
   <%= link_to 'Edit', edit_portfolio_path(@portfolio_item) %>
   <%= link_to 'Remove', portfolio_path(@portfolio_item), method: :delete, data: {confirm: "Are you sure?"} %>
