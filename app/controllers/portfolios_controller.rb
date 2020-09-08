@@ -13,6 +13,7 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio_item = Portfolio.new
+    3.times { @portfolio_item.cousines.build}
   end
 
   def create
@@ -50,6 +51,6 @@ class PortfoliosController < ApplicationController
   private
 
   def portfolio_params
-    params.require(:portfolio).permit(:title, :description, :body)
+    params.require(:portfolio).permit(:title, :description, :body, cousines_attributes: [:name])
   end
 end

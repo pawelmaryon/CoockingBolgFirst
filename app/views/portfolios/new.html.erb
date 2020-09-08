@@ -10,6 +10,11 @@
   <div>
     <%= f.text_area :body, placeholder: "Write here..." %>
   </div>
+  <ul>
+    <%= f.fields_for :cousines do |cousine| %>
+    <li><%= cousine.text_field :name, placeholder: "name" %></li>
+    <% end %>
+  </ul>
   <div>
     <%= f.submit %>
   </div>
