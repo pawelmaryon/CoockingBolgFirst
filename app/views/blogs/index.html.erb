@@ -1,5 +1,5 @@
 <h1>blogs</h1>
-<h2>Hi <%= current_user.first_name.capitalize if current_user %></h2>
+<h2>Hi <%= current_user.first_name.capitalize %></h2>
 
 <% @blogs.each do |blog| %>
   <h2><%= link_to blog.title, blog_path(blog) %></h2>
