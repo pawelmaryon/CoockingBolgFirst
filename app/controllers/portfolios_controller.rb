@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  before_action :find_portfolio, only: [:show, :destroy, :edit, :update]
   def index
     @portfolio_items = Portfolio.all
   end
@@ -26,12 +27,9 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-    @portfolio_item = Portfolio.friendly.find(params[:id])
   end
 
   def update
-    @portfolio_item = Portfolio.friendly.find(params[:id])
-
     if @portfolio_item.update(portfolio_params)
       redirect_to portfolios_path
     else
@@ -39,10 +37,9 @@ class PortfoliosController < ApplicationController
     end
   end
   def show
-    @portfolio_item = Portfolio.friendly.find(params[:id])
+    @page_title = @portfolio_item.title
   end
   def destroy
-    @portfolio_item = Portfolio.friendly.find(params[:id])
     if @portfolio_item.destroy
       redirect_to portfolios_path, notice: "Record was removed"
     end
@@ -57,5 +54,9 @@ class PortfoliosController < ApplicationController
                                       :body, 
                                       cousines_attributes: [:name]
                                     )
+  end
+
+  def find_portfolio
+    @portfolio_item = Portfolio.friendly.find(params[:id])
   end
 end
