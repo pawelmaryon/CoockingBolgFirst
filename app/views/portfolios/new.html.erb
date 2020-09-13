@@ -1,21 +1,2 @@
 <h1>Add new recipe</h1>
-
-<%= form_for @portfolio_item do |f| %>
-  <div>
-    <%= f.text_field :title, placeholder: "Title" %>
-  </div>
-  <div>
-    <%= f.text_field :description, placeholder: "Description" %>
-  </div>
-  <div>
-    <%= f.text_area :body, placeholder: "Write here..." %>
-  </div>
-  <ul>
-    <%= f.fields_for :cousines do |cousine| %>
-    <li><%= cousine.text_field :name, placeholder: "name" %></li>
-    <% end %>
-  </ul>
-  <div>
-    <%= f.submit %>
-  </div>
-<% end  %>
+<%= render 'form', portfolio_item: @portfolio_item %>

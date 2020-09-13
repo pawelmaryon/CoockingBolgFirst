@@ -22,7 +22,7 @@
       <%=  %>
     <% end %>
 
-    <%= render 'shared/links' %>
+    <%= render 'shared/navbar', location: 'top' %>
     <%= yield %>
     <% if session[:query] %>
       <p>Thanks for visiting me from <%= session[:query] %></p>

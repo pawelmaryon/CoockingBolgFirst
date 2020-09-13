@@ -2,5 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 body {
-  background: rgb(50, 77, 8);
+  background: rgb(15, 15, 15);
+  color: rgb(200, 200, 200);
+}
+.top {
+  a {
+    text-decoration: none;
+    color: rgb(20, 150, 100);
+  }
 }
