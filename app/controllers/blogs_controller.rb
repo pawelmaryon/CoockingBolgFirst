@@ -1,4 +1,6 @@
 class BlogsController < ApplicationController
+  before_action :blog_find, only: [:show, :edit, :update, :destroy]
+  layout "blog"
     def index
       @blogs = Blog.all
       @page_title = "All Blogs"
@@ -18,11 +20,9 @@ class BlogsController < ApplicationController
     end
   
     def edit
-      @blog = Blog.friendly.find(params[:id])
     end
   
     def update
-      @blog = Blog.friendly.find(params[:id])
   
       if @blog.update(blog_params)
         redirect_to portfolios_path
@@ -31,10 +31,8 @@ class BlogsController < ApplicationController
       end
     end
     def show
-      @blog = Blog.friendly.find(params[:id])
     end
     def destroy
-      @blog = Blog.friendly.find(params[:id])
       if @blog.destroy
         redirect_to portfolios_path, notice: "Record was removed"
       end
@@ -44,5 +42,10 @@ class BlogsController < ApplicationController
   
     def blog_params
       params.require(:blog).permit(:title, :body)
+    end
+
+    def blog_find
+      @blog = Blog.friendly.find(params[:id])
+
     end
 end
