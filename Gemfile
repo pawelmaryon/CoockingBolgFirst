@@ -49,3 +49,5 @@ gem 'faker', '~> 1.6', '>= 1.6.6'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'friendly_id', '~> 5.4.0'
 gem 'devise', '~> 4.7', '>= 4.7.2'
+gem 'bootstrap', '~> 5.0.0.alpha1'
+gem 'jquery-rails'
