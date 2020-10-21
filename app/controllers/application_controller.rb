@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   before_action :set_copyright
 
   def set_copyright
-    @copyright = PMaryonViewTool::Renderer.copyright "Pawel Maryon", "#{@page_title}", "h2"
+    @copyright = PMaryonViewTool::Renderer.copyright "Ja Gotuje On Piecze", "- All rights reserved", "b"
   end
 end
 

@@ -1,7 +1,7 @@
 class BlogsController < ApplicationController
   before_action :blog_find, only: [:show, :edit, :update, :destroy]
   layout "blog"
-  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+  access all: [], user: {except: [:show, :index, :destroy, :new, :create, :update, :edit]}, site_admin: :all
     def index
       @blogs = Blog.all
       @page_title = "All Blogs"

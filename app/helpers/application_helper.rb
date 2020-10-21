@@ -9,6 +9,10 @@ module ApplicationHelper
     end
   end
 
+  def blog_helper 
+    (link_to 'Blogs', blogs_path, class: 'nav-link') unless current_user.is_a?(GuestUser)
+  end
+
   def source_helper
    if session[:query]
     greeting = "Thanks for visiting me from #{session[:query]}"
