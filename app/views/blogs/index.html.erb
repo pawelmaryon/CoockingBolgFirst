@@ -3,8 +3,8 @@
 
 <% @blogs.each do |blog| %>
   <h2><%= link_to blog.title, blog_path(blog) %></h2>
-  
+ 
   <p><%= blog.body %></p>
-
   <hr>
   <% end %>
+  
