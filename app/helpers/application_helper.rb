@@ -19,4 +19,8 @@ module ApplicationHelper
     content_tag(:p, greeting, class: "source_greeting")
     end
   end
+
+  def active? path
+    "active" if current_page? path
+  end
 end
