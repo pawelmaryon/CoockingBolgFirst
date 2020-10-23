@@ -1,21 +1,28 @@
 
-
-<%= form_for @portfolio_item do |f| %>
-  <div>
-    <%= f.text_field :title, placeholder: "Title" %>
-  </div>
-  <div>
-    <%= f.text_field :description, placeholder: "Description" %>
-  </div>
-  <div>
-    <%= f.text_area :body, placeholder: "Write here..." %>
-  </div>
-  <ul>
-    <%= f.fields_for :cousines do |cousine| %>
-    <li><%= cousine.text_field :name, placeholder: "name" %></li>
-    <% end %>
-  </ul>
-  <div>
-    <%= f.submit %>
-  </div>
-<% end  %>
+<div class="container container-form">
+  <%= form_for @portfolio_item do |f| %>
+    <div class="row">
+      <div class="col-6">
+        <div>
+          <%= f.text_field :title, placeholder: "Title", class: 'form-width' %>
+        </div>
+        <div>
+          <%= f.text_field :description, placeholder: "Description", class: 'form-width' %>
+        </div>
+      </div>
+      <div class="col-6 ">
+        <div>
+          <%= f.text_area :body, placeholder: "Write here...", class: 'form-width form-body' %>
+        </div>
+      </div>
+    </div>
+      <div>
+        <%= f.fields_for :cousines do |cousine| %>
+        <div><%= cousine.text_field :name, placeholder: "name", class: 'form-width' %></div>
+        <% end %>
+      </div>
+      <div>
+        <%= f.submit 'New Post', class:'btn btn-success btn-block'%>
+      </div>
+  <% end  %>
+</div>
