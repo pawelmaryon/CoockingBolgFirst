@@ -57,7 +57,9 @@ class PortfoliosController < ApplicationController
     params.require(:portfolio).permit(
                                       :title, 
                                       :description, 
-                                      :body, 
+                                      :body,
+                                      :main_image,
+                                      :thumb_image, 
                                       cousines_attributes: [:name]
                                     )
   end
