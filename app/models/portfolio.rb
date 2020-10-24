@@ -34,5 +34,6 @@ class Portfolio < ApplicationRecord
   #     self.main_image = "https://via.placeholder.com/600x400.png"    
   #   if self.thumb_image == nil
   #     self.thumb_image = "https://via.placeholder.com/350x200.png"
+  #   end
   # end
 end
