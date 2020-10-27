@@ -58,6 +58,8 @@ class PortfoliosController < ApplicationController
                                       :title, 
                                       :description, 
                                       :body, 
+                                      :main_image,
+                                      :thumb_image,
                                       cousines_attributes: [:name]
                                     )
   end
