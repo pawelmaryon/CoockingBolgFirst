@@ -2,33 +2,28 @@
 <div class="container container-form">
   <%= form_for @portfolio_item do |f| %>
     <div class="row">
-      <div class="col-6">
+      <div>
         <div>
           <%= f.text_field :title, placeholder: "Title", class: 'form-width' %>
         </div>
         <div>
           <%= f.text_field :description, placeholder: "Description", class: 'form-width' %>
         </div>
-        <div>
-          <%= f.file_field :main_image %>
+        <div class="form-width">
+        <label class="btn btn-outline-success btn-block">Upload Main Image<%= f.file_field :main_image, style:"display:none" %></label>
         </div>
-        <div>
-          <%= f.file_field :thumb_image %>
+        <div class="form-width">
+          <label class="btn btn-outline-secondary btn-block">Upload Main Image<%= f.file_field :thumb_image, style:"display:none" %></label>
         </div>
       </div>
-      <div class="col-6 ">
+      <div>
         <div>
           <%= f.text_area :body, placeholder: "Write here...", class: 'form-width form-body' %>
         </div>
       </div>
     </div>
-      <div>
-        <%= f.fields_for :cousines do |cousine| %>
-        <div><%= cousine.text_field :name, placeholder: "name", class: 'form-width' %></div>
-        <% end %>
-      </div>
-      <div>
-        <%= f.submit 'New Post', class:'btn btn-success btn-block'%>
-      </div>
+    <div>
+      <%= f.submit 'Subbmit', class:'btn btn-success btn-block'%>
+    </div>
   <% end  %>
 </div>
