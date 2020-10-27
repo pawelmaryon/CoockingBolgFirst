@@ -1,5 +1,5 @@
 
-  <%= image_tag @portfolio_item.main_image.url unless @portfolio_item.main_image.nil?%>
+  <%= image_tag portfoilo_img(@portfolio_item.main_image.url, 'main')%>
   <h1><%= @portfolio_item.title %></h1>
   <h5><%= @portfolio_item.description %></h5>
   <p><%= @portfolio_item.body %></p>

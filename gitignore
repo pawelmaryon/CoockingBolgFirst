@@ -1,1 +1,2 @@
 .env*
+config/initializers/carrierwave.rb
