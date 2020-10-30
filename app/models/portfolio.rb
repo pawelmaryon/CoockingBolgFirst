@@ -3,7 +3,6 @@ class Portfolio < ApplicationRecord
   accepts_nested_attributes_for :cousines,
                                 reject_if: lambda { |attribute| attribute[:name].blank? }
   validates :title, presence: true
-  validates :description, presence: true
   validates :body, presence: true
 
   mount_uploader :main_image, PortfolioUploader
