@@ -1,10 +1,9 @@
-
-<div class="showpage-content ">
-  <%= image_tag portfoilo_img(@portfolio_item.main_image.url, 'main'), class: 'show-card-img'%>
-</div>
 <div class="showpage-content ">
   <h1 class="showpage-header"><%= @portfolio_item.title %></h1>
 </div> 
+<div class="showpage-content ">
+  <%= image_tag portfoilo_img(@portfolio_item.main_image.url, 'main'), class: 'show-card-img'%>
+</div>
 <div class="showpage-content showpage-description">
   <p><%= @portfolio_item.body %></p>
 </div>

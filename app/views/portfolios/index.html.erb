@@ -1,14 +1,16 @@
 
-<h1>Portfolio</h1>
   <div class="album py-5">
-    <div class="container">
+    <div class="container index-container">
       <div class="row">
         <% @portfolio_items.each do |item| %>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="card mb-4 shadow-sm">
             <%= link_to portfolio_show_path(item) do %>
               <%= image_tag portfoilo_img(item.thumb_image.url, 'thumb'), class: 'index-card-width'%>
-            <% end %>
+              <div class="card-body">
+                <h5 class="card-title"><%= item.title %></h5>
+              </div>
+              <% end %>
           </div>
         </div>
         <% end %>

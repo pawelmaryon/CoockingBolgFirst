@@ -8,13 +8,18 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(61, 53, 34);
   font-family: 'Lato', sans-serif;
   font-weight: 700;
+  margin: 0;
 }
 
 p{
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  color:  rgb(206, 140, 120);
+  font-size: 20px;
+  color: rgb(61, 53, 34);
+}
+
+.copy-footer {
+  color: rgb(206, 140, 120);
 }
 /*
  * Globals
@@ -57,7 +62,7 @@ body {
 }
 
 .cover-container {
-  max-width: 55em;
+  max-width: 84em;
 }
 .container-form {
   max-width: 30em;
@@ -75,12 +80,13 @@ body {
   margin-bottom: 0;
 }
 
-.nav-masthead .nav-link {
+.nav-masthead .nav-link { 
   padding: .25rem 0;
   font-weight: 700;
   color: rgba(206, 140, 120, 0.5);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
+  font-size: 1.25rem;
 }
 
 .nav-masthead .nav-link:hover,
@@ -99,10 +105,9 @@ body {
 
 @media (min-width: 48em) {
   .masthead-brand {
-    float: left;
   }
   .nav-masthead {
-    float: right;
+
   }
 }
 
@@ -173,7 +178,10 @@ footer p {
   margin-bottom: .25rem;
 }
 .card-body {
-  background: rgb(75, 75, 75);
+  background:rgba(206, 140, 120, 0.5);
+  .card-title {
+    color:  rgb(196, 115, 90);;
+  }
 }
 .card-header {
   font-weight: 700;
@@ -202,8 +210,8 @@ footer p {
 .show-card-img {
   max-height: 40vh;
   object-fit: contain;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgba(196, 115, 90, 0.2), 0 6px 20px 0 rgba(196, 115, 90, 0.19);
+  padding: 1px;
 }
 
 .showpage-content {
@@ -211,13 +219,18 @@ footer p {
 
 }
 .showpage-header{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 30px;
+
+  font-weight: bold;
 }
 .showpage-description {
 border: gray;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-padding: 30px;
+  p {
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    /* padding-top: 24px; */
+    padding: 24px 0;
+  }
+
 }
 
 .header-padding {
@@ -239,3 +252,21 @@ padding: 30px;
 .mb-4 {
   margin-bottom: 0.2rem !important;
 } 
+.logo-img {
+  height: 200px;
+  width: 200px;
+  background-image: url('background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.index-container  {
+  border: solid 2px rgb(206, 140, 120)  ;
+  padding: 2px;
+}
+.py-5 {
+  padding-top: 6rem !important;
+  padding-bottom: 3rem !important;
+}
