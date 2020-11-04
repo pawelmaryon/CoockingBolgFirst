@@ -7,6 +7,7 @@
     <nav class="nav nav-masthead justify-content-center">
       <%= blog_helper if logged_in?(:site_admin) %>
       <%= link_to 'New Portfolio Item', new_portfolio_path, class:"nav-link #{active? new_portfolio_path}" if logged_in?(:site_admin) %>
+      <%= login_helper if logged_in?(:site_admin) %>
     </nav>
   </div>
 </header>
