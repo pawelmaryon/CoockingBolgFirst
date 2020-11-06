@@ -7,7 +7,7 @@ class PortfoliosController < ApplicationController
   end
   def index
     @portfolio_items = Portfolio.order(created_at: :desc)
-    @last_portfolio_item = Portfolio.last
+
   end
 
   def soya
