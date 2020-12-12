@@ -74,11 +74,13 @@ body {
  * Header
  */
 .header {
+  padding-top: 36px;
 }
 .masthead {
   .inner {
     padding: 15px;
   }
+  margin-bottom: 12px;
 }
 
 .masthead-brand {
@@ -159,7 +161,7 @@ body {
     padding-bottom: 6rem;
   }
   .b-shadow {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(58, 50, 31, 0.5);
   }
 }
 
