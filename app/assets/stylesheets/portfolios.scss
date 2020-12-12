@@ -62,6 +62,8 @@ body {
 
 .cover-container {
   max-width: 55em;
+}
+.b-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .container-form {
@@ -130,6 +132,7 @@ body {
  */
 .mastfoot {
   color: rgba(201, 214, 234, 0.5);
+  background-color: rgb(58, 50, 31);
 }
 /* Custon styles */
 
@@ -155,6 +158,9 @@ body {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
+  .b-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
 }
 
 .jumbotron p:last-child {
@@ -170,8 +176,8 @@ body {
 }
 
 footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 footer p {
@@ -216,9 +222,10 @@ footer p {
 }
 .show-card-img {
   max-height: 40vh;
+  max-width: 100%;
   object-fit: contain;
   // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 30px;
+  // padding: 30px;
 }
 
 .showpage-content {
@@ -286,5 +293,10 @@ footer p {
 @media (min-width: 576px) {
   .col-sm-4 {
     margin-bottom: 8px;
+  }
+}
+@media (max-width: 360px) {
+  .b-shadow {
+    box-shadow: none;
   }
 }
